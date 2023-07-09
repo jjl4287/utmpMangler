@@ -25,6 +25,7 @@ To use the `utmpMangler` tool, follow these steps:
    ```shell
    gcc -o utmpMangler utmpMangler.c
    ```
+
 3. Run the tool by providing the appropriate command-line options and input files. Here are some examples:
     - Coalesce multiple utmp files and display the filtered records on the standard output:
     ```shell
@@ -40,17 +41,18 @@ To use the `utmpMangler` tool, follow these steps:
 ## Example Use Cases
 
 1. Display login records for a specific user within a given date range:
-    ```shell
+    ```
     ./utmpMangler -d01/2023 -ujohndoe
     ```
 This command coalesces utmp files, filters the records for January 2023, and displays login records for the user "johndoe".
+
 2. Write login records for all users to an output file:
-    ```shell
+    ```
     ./utmpMangler -oall_users.utmp
     ```
 This command coalesces utmp files and writes all login records to the file "all_users.utmp".
 Display login records for all users in a specific month:
-    ```shell
+    ```
     ./utmpMangler -d06/2023
     ```
 This command coalesces utmp files and displays login records for all users in June 2023.
